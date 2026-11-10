@@ -1,3 +1,9 @@
+/**
+ * PlantRepository.java
+ * @author Jodie Kwan, Ahaan Sinha
+ * contract to store/get plant objects
+ */
+
 package plantops.model;
 
 import java.util.List;
@@ -12,6 +18,7 @@ public interface PlantRepository {
     List<Plant> findAll();
     List<Plant> findByCommonName(String commonName);
     List<Plant> findBySpecies(String species);
+    Optional<Plant> findByPrice(double price);
     List<Plant> findByIndoorSafe(boolean indoorSafe);
     List<Plant> findByPetSafe(boolean petSafe);
 

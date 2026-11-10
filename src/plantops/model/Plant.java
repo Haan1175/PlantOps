@@ -1,3 +1,8 @@
+/**
+ * Plant.java
+ * @author Jodie Kwan, Ahaan Sinha
+ */
+
 package plantops.model;
 public class Plant {
     // Initialize fields
@@ -6,13 +11,15 @@ public class Plant {
     private String species;
     private double price;
     private boolean indoorSafe;
+    private boolean petSafe;
     // Create plant constructor and called set constructor to prevent invalid values from being passed
-    public Plant (int id, String commonName, String species, double price, boolean indoorSafe){
+    public Plant (int id, String commonName, String species, double price, boolean indoorSafe, boolean petSafe){
         setId(id);
         setCommonName(commonName);
         setSpecies(species);
         setPrice(price);
         setIndoorSafe(indoorSafe);
+        setPetSafe(petSafe);
     }
     //created all the getter methods
     public String getCommonName(){
@@ -29,6 +36,9 @@ public class Plant {
     }
     public boolean getIndoorSafe(){
         return indoorSafe;
+    }
+    public boolean getPetSafe() {
+        return petSafe;
     }
     //created all the setter methods with exceptions for invalid values
     public void setCommonName(String commonName){
@@ -60,9 +70,12 @@ public class Plant {
     public void setIndoorSafe(boolean indoorSafe){
         this.indoorSafe=indoorSafe;
     }
+    public void setPetSafe(boolean petSafe){
+        this.petSafe = petSafe;
+    }
     // Created a toString method to display values for a plant
     @Override
     public String toString() {
-        return "Plant{name='" + commonName + "', species='" + species + "', id=" + id + ", price=" + price + ", IndoorSafe=" + indoorSafe + "}";
+        return "Plant{name='" + commonName + "', species='" + species + "', id=" + id + ", price=" + price + ", IndoorSafe=" + indoorSafe + ", PetSafe=" + petSafe + "}";
     }
 }
